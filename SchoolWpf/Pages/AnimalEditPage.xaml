@@ -1,0 +1,36 @@
+﻿<Page x:Class="SchoolWpf.Pages.AnimalEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AnimalEditPage">
+
+    <Grid Width="300" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="191*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Height="NaN" Width="NaN">
+            <TextBlock Text="Место обитания:" Margin="0 5 0 5"/>
+            <TextBlock Text="Основной рацион:" Margin="0 2 0 5"/>
+            <TextBlock Text="Страна обитания:" Margin="0 2 0 5"/>
+            <TextBlock Text="Время жизни:" Margin="0 2 0 5"/>
+            <TextBlock Text="Название:" Margin="0 2 0 5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Height="NaN" Width="NaN">
+            <TextBox x:Name="TbHabitat" Height="20" Width="150" Margin="5 2 0 2" Text="{Binding Habitat}"/>
+            <TextBox x:Name="TbNutrition" Height="20" Width="150" Margin="5 2 0 2" Text="{Binding Nutrition}"/>
+            <TextBox x:Name="TbCountry" Height="20" Width="150" Margin="5 2 0 2" Text="{Binding Country}"/>
+            <TextBox x:Name="TbLifeTimeInYear" Height="20" Width="150" Margin="5 2 0 2" Text="{Binding LifeTimeInYear}"/>
+            <TextBox x:Name="TbName"  Height="20" Width="150" Margin="5 2 0 2" Text="{Binding Name}"/>
+        </StackPanel>
+        <StackPanel Margin="0 0 0 150" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Margin="3" Content="Сохранить" Click="SaveButton_Click"/>
+            <Button Margin="3" Content="Отмена" Click="BackButton_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>
